@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über mich | Trading meets Nervensystem</title>
+  <meta name="description" content="Hi, ich bin Kristina — Nervensystem-Coach für Trader. Erfahre mehr über meine Geschichte, Ausbildung und Methodik.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Angebots-Karten auf About-Seite — wie Index (navy-deeper Hintergrund, weiße Karten) */
+.about-services .section-header .label { color: var(--teal-light); }
+    .about-services .section-header h2 { color: var(--white); }
+    .about-services .section-header p { color: rgba(255,255,255,0.6); }
+    .about-services .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-services .service-card { background: var(--white); border-color: var(--gray-200); }
+    .about-services .service-card:hover { background: var(--white); border-color: var(--teal-light); box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+    .about-services .service-card h3 { color: var(--navy-dark); }
+    .about-services .service-card p { color: var(--gray-600); }
+    .about-services .service-card .service-list li { color: var(--gray-600); }
+    .about-services .service-card .service-list li::before { background: var(--teal); }
+    .about-services .service-card.featured { background: var(--white); border: 2px solid var(--teal-light); }
+    .about-services .service-card.featured h3 { color: var(--navy-dark); }
+    .about-services .service-card.featured p { color: var(--gray-600); }
+    .about-services .service-card.featured .service-list li { color: var(--gray-600); }
+    .about-services .service-card.featured .service-list li::before { background: var(--teal); }
+    .about-services .service-card.featured .service-icon { background: var(--teal-pale); }
+    .about-services .service-card.tmm { background: var(--white); border: 2px dashed rgba(107,155,141,0.5); }
+    .about-services .service-card.tmm:hover { border-color: var(--teal-light); border-style: solid; box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+    .about-services .service-card.tmm h3 { color: var(--navy-dark); }
+    .about-services .service-card.tmm p { color: var(--gray-600); }
+    .about-services .service-card.tmm .service-list li { color: var(--gray-600); }
+    .about-services .service-card.tmm .service-list li::before { background: var(--teal); }
+    .tmm-badge { display: inline-block; background: var(--teal-pale); color: var(--teal); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 14px; }
+    @media (max-width: 600px) { .about-services .services-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 860px) {
+      .blick-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 500px) {
+      .blick-grid { grid-template-columns: 1fr !important; }
+    }
+    /* ===== MOBILE FIXES about.html ===== */
+    @media(max-width:768px) {
+      /* Bio: Text + Foto untereinander */
+      .bio-content-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+      /* Sticky Foto deaktivieren */
+      .bio-content-grid > div[style*="position:sticky"] { position: static !important; }
+    }
+    @media(max-width:600px) {
+      .page-hero { padding-top: calc(var(--nav-h, 64px) + 32px) !important; padding-bottom: 48px !important; }
+      .page-hero h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+      .about-services .services-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body class="subpage">
+
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">Trading meets Nervensystem</span>
+      <span class="logo-sub">by Kristina</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="beratung.html">Beratung</a></li>
+      <li><a href="about.html" class="active">Über mich</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+    <a href="mustercheck.html" class="btn btn-teal btn-sm nav-cta">Gratis Mustercheck</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="coaching.html">Coaching</a>
+  <a href="beratung.html">Beratung</a>
+  <a href="about.html">Über mich</a>
+  <a href="contact.html">Kontakt</a>
+  <a href="mustercheck.html" class="btn btn-teal" style="margin-top:8px;justify-content:center;">Gratis Mustercheck <span class="arrow">→</span></a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="label">Über mich</p>
+    <h1>Wissen allein<br><span class="accent">reicht nicht.</span></h1>
+    <p>Ich helfe Tradern, die alles wissen und trotzdem nicht so handeln, wie sie sollten.</p>
+  </div>
+</section>
+
+<!-- BIO -->
+<section style="background:var(--white);padding:96px 0 64px;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:start;" class="bio-content-grid">
+      <div class="fade-up">
+        <p class="label">Meine Geschichte</p>
+        <h2>Hi, ich bin Kristina.</h2>
+        <p style="margin:20px 0 24px;">Ich bin zertifizierte Coachin und selbst Traderin — und ich kenne beide Seiten des Charts.</p>
+
+        <div style="background:var(--navy-deeper);border-left:3px solid var(--teal-light);border-radius:var(--radius-sm);padding:20px 24px;margin-bottom:24px;">
+          <p style="color:rgba(255,255,255,0.75);font-style:italic;font-size:0.9rem;line-height:1.7;margin:0;">"Der Handel an der Börse widerspricht der menschlichen Natur."</p>
+          <p style="color:var(--teal-light);font-size:0.75rem;font-weight:600;margin:8px 0 0;">— Tom Hougaard, <em>Best Loser Wins</em></p>
+        </div>
+
+        <p style="margin-bottom:16px;">Genau das durfte auch ich immer wieder am eigenen Leib erfahren. Ich habe erlebt, wie es ist, ein Konto zu dritteln, Rachetrades zu platzieren, Emotionen zu unterdrücken — und dabei an meine mentalen und körperlichen Grenzen zu kommen.</p>
+
+        <p style="margin-bottom:16px;">Mein größtes Wachstum begann in dem Moment, als ich aufgehört habe, gegen meine Emotionen, inneren Anteile und Glaubenssätze anzukämpfen. Stattdessen habe ich begonnen, mit ihnen zu arbeiten — sie zu verstehen und zu transformieren.</p>
+
+        <p>Diesen Prozess habe ich selbst durchlebt. Deshalb begleite ich dich nicht nur als Coachin, sondern auch als Betroffene. Theorie und eigene Erfahrung verbinde ich bewusst — um dich authentisch und wirksam begleiten zu können.</p>
+      </div>
+      <!-- FOTO rechts -->
+      <div class="fade-up" style="position:sticky;top:100px;">
+        <img src="Foto_Startseite_oben.jpg" alt="Kristina – Nervensystem-Coach für Trader"
+          style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:var(--radius-lg);display:block;box-shadow:0 16px 48px rgba(37,64,93,0.15);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUF EINEN BLICK -->
+<section style="background:var(--gray-50);padding:56px 0 64px;border-top:1px solid var(--gray-200);">
+  <div class="container">
+    <p class="label" style="text-align:center;margin-bottom:40px;">Auf einen Blick</p>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px;" class="blick-grid">
+      <div class="blick-card fade-up" style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:28px 20px;text-align:center;">
+        <div style="font-size:1.8rem;margin-bottom:12px;">🎓</div>
+        <div style="font-weight:700;font-size:0.85rem;color:var(--navy-dark);margin-bottom:6px;">Zertifizierte Ausbildung</div>
+        <div style="font-size:0.78rem;color:var(--gray-500);line-height:1.5;">NLP Practitioner · Mental Coach · Systemische 3-jährige Ausbildung (i.A.)</div>
+      </div>
+      <div class="blick-card fade-up" style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:28px 20px;text-align:center;">
+        <div style="font-size:1.8rem;margin-bottom:12px;">📈</div>
+        <div style="font-weight:700;font-size:0.85rem;color:var(--navy-dark);margin-bottom:6px;">2+ Jahre Coaching</div>
+        <div style="font-size:0.78rem;color:var(--gray-500);line-height:1.5;">1:1 & Gruppenworkshops — nah dran, wirksam</div>
+      </div>
+      <div class="blick-card fade-up" style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:28px 20px;text-align:center;">
+        <div style="font-size:1.8rem;margin-bottom:12px;">📊</div>
+        <div style="font-weight:700;font-size:0.85rem;color:var(--navy-dark);margin-bottom:6px;">3+ Jahre Markt</div>
+        <div style="font-size:0.78rem;color:var(--gray-500);line-height:1.5;">Aktive Traderin in Forex</div>
+      </div>
+      <div class="blick-card fade-up" style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:28px 20px;text-align:center;">
+        <div style="font-size:1.8rem;margin-bottom:12px;">👥</div>
+        <div style="font-weight:700;font-size:0.85rem;color:var(--navy-dark);margin-bottom:6px;">100+ Personen</div>
+        <div style="font-size:0.78rem;color:var(--gray-500);line-height:1.5;">Begleitet in 1:1 & Workshops</div>
+      </div>
+      <div class="blick-card fade-up" style="background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:28px 20px;text-align:center;">
+        <div style="font-size:1.8rem;margin-bottom:12px;">🧠</div>
+        <div style="font-weight:700;font-size:0.85rem;color:var(--navy-dark);margin-bottom:6px;">Ganzheitlich</div>
+        <div style="font-size:0.78rem;color:var(--gray-500);line-height:1.5;">Mental · Körperorientiert · Nervensystem</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANGEBOTE -->
+<section style="background:var(--navy-deeper);padding:80px 0;">
+  <div class="container about-services">
+    <div class="section-header center fade-up">
+      <p class="label">Angebote</p>
+      <h2>So kann ich dir helfen</h2>
+      <p>Individuelle Begleitung auf deinem Weg zu emotionaler Freiheit und technischer Präzision im Trading.</p>
+    </div>
+    <div class="services-grid fade-up">
+      <div class="service-card featured fade-up">
+        <div class="service-icon">🎯</div>
+        <h3>1:1 Coaching</h3>
+        <p>Intensive, mehrwöchige Begleitung zur Dekodierung deiner Handelsmuster und Aufbau eines regulierten Nervensystems.</p>
+        <ul class="service-list">
+          <li>Deep-Dive in Triggerpunkte</li>
+          <li>Maßgeschneiderte SOS-Tools</li>
+          <li>Wöchentliche Live-Sessions</li>
+        </ul>
+        <a href="coaching.html" class="btn btn-teal" style="margin-top:auto;justify-content:center;">Mehr erfahren <span class="arrow">→</span></a>
+      </div>
+      <div class="service-card tmm fade-up">
+        <div class="service-icon">🧠</div>
+        <div class="tmm-badge">Bald verfügbar</div>
+        <h3>Trading Mindset Mastery</h3>
+        <p>Das Programm für Trader, die verstehen wollen, warum Wissen allein nicht reicht — und ihr Nervensystem als Schlüssel begreifen.</p>
+        <ul class="service-list">
+          <li>Strukturierter Transformationsprozess</li>
+          <li>Nervensystem & Identitätsarbeit</li>
+          <li>Limitierte Plätze</li>
+        </ul>
+        <a href="waitlist.html" class="btn btn-teal" style="margin-top:auto;justify-content:center;">Zur Warteliste <span class="arrow">→</span></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">💬</div>
+        <h3>1:1 Beratung</h3>
+        <p>Fokussierte Beratung zur Analyse konkreter Trading-Situationen, mentaler Blockaden und Stressreaktionen – mit klaren Impulsen für besseren Umgang mit Situationen unter Druck.</p>
+        <ul class="service-list">
+          <li>Akute Stressbewältigung</li>
+          <li>90-minütige Power-Sitzung</li>
+          <li>Sofort umsetzbare Strategien</li>
+        </ul>
+        <a href="beratung.html" class="btn btn-teal" style="margin-top:auto;justify-content:center;">Mehr erfahren <span class="arrow">→</span></a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">👥</div>
+        <h3>Gruppenworkshops</h3>
+        <p>Gemeinsames Lernen und Wachsen. Profitiere vom Austausch mit anderen Tradern in einem geschützten Rahmen.</p>
+        <ul class="service-list">
+          <li>Wöchentliche Impulse</li>
+          <li>Community-Support</li>
+          <li>Live Trading-Analyse</li>
+        </ul>
+        <a href="contact.html" class="btn btn-teal" style="margin-top:auto;justify-content:center;">Anfragen <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--gray-50);padding:96px 0;border-top:1px solid var(--gray-200);">
+  <div class="container">
+    <div style="max-width:680px;margin:0 auto;text-align:center;" class="fade-up">
+      <p class="label">Kostenloser Selbsttest</p>
+      <h2 style="color:var(--navy-dark);margin-bottom:20px;">Die meisten Trader scheitern nicht an der Strategie,<br>sondern an ihren Mustern.</h2>
+      <p style="color:var(--gray-600);font-size:1.05rem;margin-bottom:36px;">Finde heraus, welches Muster dich am meisten sabotiert — kostenloser Selbsttest.</p>
+      <a href="contact.html" class="btn btn-teal btn-lg">Mustercheck starten <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" style="padding:32px 0;">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin:0;">© 2025 tradingmeetsnervensystem.de · Alle Rechte vorbehalten</p>
+      <div style="display:flex;gap:20px;">
+        <a href="impressum.html" style="font-size:0.8rem;color:rgba(255,255,255,0.4);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Impressum</a>
+        <a href="datenschutz.html" style="font-size:0.8rem;color:rgba(255,255,255,0.4);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
+
+
+
